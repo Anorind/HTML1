@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SitePage</title>
+    <meta charset="UTF-8">
+    <style>
+            * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+        header {
+            background-color: lightsalmon;
+            color: white;
+            height: 50px;
+            margin-left: 5px;
+            margin-top: 5px;
+            margin-right: 5px;
+        }
+        header div {
+            padding-top: 15px;
+            padding-left: 40px;
+        }
+        .divMenu {
+            color: white;
+            background-color: brown;
+            height: 40px;
+            margin-left: 5px;
+            margin-top: 5px;
+            margin-right: 5px;
+        }
+        .divMenu div {
+            padding-top: 10px;
+            padding-left: 40px;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-left: 5px;
+            margin-right: 5px;
+            color: white;
+        }
+        .panel-left {
+            margin-top: 5px;
+            float: left;
+        }
+        .panel-left-up {
+            width: 300px;
+            height: 100px;
+            background-color: burlywood;
+            padding-left: 40px;
+            padding-top: 15px;
+        }
+        .panel-left-down {
+            width: 300px;
+            height: 200px;
+            background-color: burlywood;
+            margin-top: 5px;
+            padding-left: 40px;
+            padding-top: 15px;
+        }
+        .panel-center {
+            width: 600px;
+            height: 400px;
+            background-color: burlywood;
+            margin-top: 5px;
+            margin-right: 5px;
+            margin-left: 5px;
+            float: left;
+        }
+        .section1, .section2 {
+        width: 500px;
+        height: 180px;
+        background-color: antiquewhite;
+        margin-top: 5px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-left: 50px;
+        padding-top: 10px;
+        }
+        .panel-name{
+            padding-left: 50px;
+        }
+        .panel-right {
+            flex-grow: 1;
+            width: auto;
+            height: 350px;
+            background-color: burlywood;
+            margin-top: 5px;
+            float: left;
+            padding-left: 150px;
+            padding-top: 50px;
+            font-size:xx-large;
+        }
+        footer {
+            background-color: lightsalmon;
+            color: white;
+            height: 50px;
+            margin-left: 5px;
+            margin-top: 5px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+        footer div {
+            padding-top: 15px;
+            padding-left: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>HEADER</div>
+    </header>
+    <nav class="divMenu">
+        <div>MENU</div>
+    </nav>
+    <div class="container">
+        <div class="panel-left">
+            <div class="panel-left-up"><p>ASIDE 1</p></div>
+            <div class="panel-left-down"><p>ASIDE 2</p></div>
+        </div>
+        <div class="panel-center">
+            <p class="panel-name">MAIN CONTENT</p>
+            <div class="section1">SECTION 1</div>
+            <div class="section2">SECTION 2</div>
+        </div>
+        <div class="panel-right">
+            <p>A</p>
+            <p>S</p>
+            <p>I</p>
+            <p>D</p>
+            <p>E</p>
+            <p>3</p>
+        </div>
+    </div>
+    <footer>
+        <div>FOOTER</div>
+    </footer>
+</body>
+</html>
+
