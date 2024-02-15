@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SitePage</title>
+    <meta charset="UTF-8">
+    <style>
+        footer{
+          background-color: aqua;
+
+        }
+        .container {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          border-bottom: 1px solid black;
+          padding-bottom: 10px;
+        }
+        .panel {
+          flex: 1;
+          margin: 10px;
+          padding: 10px;
+        }
+        
+        .panel a {
+          text-decoration: none;
+          color: black;
+        }
+        
+        .panel a:hover {
+          text-decoration: underline;
+        }
+        
+        .rightPanel a.insta,
+        .rightPanel a.youtube,
+        .rightPanel a.facebook {
+          display: inline-block;
+          width: 64px; 
+          height: 64px; 
+        }
+        
+        .rightPanel a.insta {
+          background: url('https://github.com/Anorind/HTML1/raw/main/Homework4/icons/insta.png') no-repeat;
+        }
+        
+        .rightPanel a.insta:hover {
+          background: url('https://github.com/Anorind/HTML1/raw/main/Homework4/icons/insta_gray.png') no-repeat;
+        }
+        
+        .rightPanel a.youtube {
+          background: url('https://github.com/Anorind/HTML1/raw/main/Homework4/icons/youtube.png') no-repeat;
+        }
+        
+        .rightPanel a.youtube:hover {
+          background: url('https://github.com/Anorind/HTML1/raw/main/Homework4/icons/youtube_gray.png') no-repeat;
+        }
+
+        .rightPanel a.facebook {
+          background: url('https://github.com/Anorind/HTML1/raw/main/Homework4/icons/fb.png') no-repeat;
+        }
+        
+        .rightPanel a.facebook:hover {
+          background: url('https://github.com/Anorind/HTML1/raw/main/Homework4/icons/fb_gray.png') no-repeat;
+        }
+        </style>
+        </head>
+        <body>
+        <footer>
+          <div class="container">
+            <div class="panel leftPanel">
+              <p><a href="#">Home</a></p>
+              <p><a href="#">About</a></p>
+              <p><a href="#">Gallery</a></p>
+              <p><a href="#">News</a></p>
+            </div>
+            <div class="panel centerPanel">
+              <p><a href="#">Blog</a></p>
+              <p><a href="#">FAQ</a></p>
+              <p><a href="#">Contacts</a></p>
+              <p><a href="#">Privacy&Cookies</a></p>
+            </div>
+            <div class="panel rightPanel">
+              <a href="#" class="insta"></a>
+              <a href="#" class="youtube"></a>
+              <a href="#" class="facebook"></a>
+            </div>
+          </div>
+          <div style="text-align: center;padding-top: 10px;">Copyright Copy 2023/2024</div>
+        </footer>
+        </body>
+        </html>
+
