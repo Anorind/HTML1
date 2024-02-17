@@ -1,20 +1,18 @@
-
 table {
     border-collapse: collapse;
     width: 100%;
 }
 th, td {
-    border: 1px solid black;
     padding: 8px;
-    text-align: left;
+    text-align: center;
 }
-th:first-child, td:first-child {
+th:first-child{
     position: sticky;
     left: 0;
-    background: white;
+    background-color: aquamarine;
 }
 th {
     position: sticky;
     top: 0;
-    background: white;
+    background-color: aquamarine;
 }
