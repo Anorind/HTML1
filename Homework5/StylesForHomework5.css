@@ -1,3 +1,23 @@
+/*Styles for Tables.html*/
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    padding: 8px;
+    text-align: center;
+}
+th:first-child{
+    position: sticky;
+    left: 0;
+    background-color: aquamarine;
+}
+th {
+    position: sticky;
+    top: 0;
+    background-color: aquamarine;
+}
+/*Styles for Menu.html*/
 .menu {
     padding-top: 20px;
     display: flex;
