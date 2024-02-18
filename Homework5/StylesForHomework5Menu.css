@@ -1,0 +1,46 @@
+.menu {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    transition: width 0.3s;
+    width: 50px;
+    overflow: hidden;
+    background-color: darkgray;
+    position:fixed;
+}
+.menu:hover .MENU_span{
+    text-align: center;
+}
+.menu:hover {
+    width: 170px;
+}
+.menu_item {
+    color: white;
+    margin-bottom: 30px;
+}
+.menu_item:hover{
+    background-color: gray;
+    cursor: pointer;
+}
+.image{
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+}
+.text {
+    display: none;
+}
+.menu:hover .text {
+    display: inline;
+}
+.MENU_span {
+color: white;
+    font-size: 100%;
+    font-family: Arial;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+.content {
+    padding-left: 150px;
+}
