@@ -1,66 +1,156 @@
 /*Styles for Tables.html*/
 table {
-    border-collapse: collapse;
-    width: 100%;
+  border-collapse: collapse;
+  width: 100%;
 }
 th, td {
-    padding: 8px;
-    text-align: center;
+  padding: 8px;
+  text-align: center;
 }
 th:first-child{
-    position: sticky;
-    left: 0;
-    background-color: aquamarine;
+  position: sticky;
+  left: 0;
+  background-color: aquamarine;
 }
 th {
-    position: sticky;
-    top: 0;
-    background-color: aquamarine;
+  position: sticky;
+  top: 0;
+  background-color: aquamarine;
 }
 /*Styles for Menu.html*/
 .menu {
-    padding-top: 20px;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    transition: width 0.3s;
-    width: 50px;
-    overflow: hidden;
-    background-color: darkgray;
-    position:fixed;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  transition: width 0.3s;
+  width: 50px;
+  overflow: hidden;
+  background-color: darkgray;
+  position:fixed;
 }
 .menu:hover .MENU_span{
-    text-align: center;
+  text-align: center;
 }
 .menu:hover {
-    width: 170px;
+  width: 170px;
 }
 .menu_item {
-    color: white;
-    margin-bottom: 30px;
+  color: white;
+  margin-bottom: 30px;
 }
 .menu_item:hover{
-    background-color: gray;
-    cursor: pointer;
+  background-color: gray;
+  cursor: pointer;
 }
 .image{
-    width: 40px;
-    height: 40px;
-    margin-right: 20px;
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
 }
 .text {
-    display: none;
+  display: none;
 }
 .menu:hover .text {
-    display: inline;
+  display: inline;
 }
 .MENU_span {
 color: white;
-    font-size: 100%;
-    font-family: Arial;
-    font-weight: bold;
-    padding-bottom: 20px;
+  font-size: 100%;
+  font-family: Arial;
+  font-weight: bold;
+  padding-bottom: 20px;
 }
 .content {
-    padding-left: 150px;
+  padding-left: 150px;
+}
+
+/*Styles for Blocks.html*/
+ .container {
+display: flex;
+}
+
+.block {
+margin: 10px;
+padding: 20px;
+border: 1px solid black;
+flex-grow: 1;
+text-align: center;
+transition: all 1s ease-in-out;
+background-color: aliceblue;
+border-radius: 10px;
+}
+
+.block:hover {
+transform: scale(1.1);
+box-shadow: 10px 10px 5px grey;
+}
+
+.header {
+border-bottom: 2px solid;
+font-weight: bolder;
+font-size: larger;
+}
+
+.enterprise_header {
+border-color: violet;
+}
+
+.professional_header {
+border-color: orange;
+}
+
+.standart_header {
+border-color: blue;
+}
+
+.basic_header {
+border-color: green;
+}
+
+.count {
+font-size:xx-large;
+font-weight:bolder;
+padding-top: 10px;
+}
+
+.button {
+margin-top: 20px;
+padding: 10px;
+color: white;
+border: none;
+cursor: pointer;
+border-radius: 10px;
+}
+
+.button_ENTERPRISE {
+background-color: violet;
+}
+
+.button_PROFESSIONAL {
+background-color: orange;
+}
+
+.button_STANDART {
+background-color: blue;
+}
+
+.button_BASIC {
+background-color: green;
+}
+
+.button:active {
+background-color: grey;
+}
+
+.text_per_month {
+font-size:large;
+font-weight:bolder;
+padding-top: 10px;
+color: lightgray;
+}
+
+.text_common {
+font-weight:bolder;
+padding-top: 10px;
 }
