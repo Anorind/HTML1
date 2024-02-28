@@ -15,6 +15,10 @@ body {
     margin: 0 auto;
     margin-top:50px;
     position:relative;
+    background-image: url('https://github.com/Anorind/HTML1/raw/main/Homework7/icons/moon_flag.png');
+    background-position: calc(100% + 60px) 110%;
+    background-repeat: no-repeat;
+    background-size: 300px 300px;
 }
 .detailsRibbon{
     position:absolute;
