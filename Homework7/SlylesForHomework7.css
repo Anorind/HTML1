@@ -1,0 +1,170 @@
+/*Styles for CreditCard.html*/
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.mainForm {
+    width: 70%;
+    height: 80vh;
+    background-color:aquamarine;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top:50px;
+    position:relative;
+}
+.detailsRibbon{
+    position:absolute;
+    background-color: orange;
+    width: 80%;
+    height: 15%;
+    left: -10%;
+    top: 10%;
+    color:white;
+    font-size: 3vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.labelCardNumber{
+    position:absolute;
+    padding: 10px;
+    left:5%;
+    top: 27%;
+    color: gray;
+    font-size: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cardNumber{
+    position:absolute;
+    background-color: rgb(130, 202, 178);
+    padding: 10px;
+    width:60%;
+    height:8%;
+    left:5%;
+    top: 35%;
+    border: 1px gray;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1vw;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.labelNameOfCard{
+    position:absolute;
+    padding: 10px;
+    left:5%;
+    top: 49%;
+    color: gray;
+    font-size: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nameOfCard{
+    position:absolute;
+    background-color: rgb(130, 202, 178);
+    padding: 10px;
+    width:60%;
+    height:8%;
+    left:5%;
+    top: 57%;
+    border: 1px gray;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1vw;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.labelExpiryDateMonth{
+    position:absolute;
+    padding: 10px;
+    left:5%;
+    top: 71%;
+    color: gray;
+    font-size: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.expiryDateMonth{
+    position:absolute;
+    background-color: rgb(130, 202, 178);
+    padding: 10px;
+    width:13%;
+    height:8%;
+    left:5%;
+    top: 79%;
+    border: 1px gray;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1vw;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.labelExpiryDateYear{
+    position:absolute;
+    padding: 10px;
+    left:15%;
+    top: 71%;
+    color: gray;
+    font-size: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.expiryDateYear{
+    position:absolute;
+    background-color: rgb(130, 202, 178);
+    padding: 10px;
+    width:13%;
+    height:8%;
+    left:30%;
+    top: 79%;
+    border: 1px gray;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1vw;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.labelCVV{
+    position:absolute;
+    padding: 10px;
+    left:52%;
+    top: 71%;
+    color: gray;
+    font-size: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.CVV{
+    position:absolute;
+    background-color: rgb(130, 202, 178);
+    padding: 10px;
+    width:13%;
+    height:8%;
+    left:52%;
+    top: 79%;
+    border: 1px gray;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1vw;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
