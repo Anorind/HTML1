@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Info</title>
+    <script src="carInfo.js"></script>
+</head>
+<body>
+    <h1>Car Information</h1>
+    <p id="car-info"></p>
+    <script>
+        const myCar = new Car("Toyota", "Camry", 2022, 100);
+        const carInfoElement = document.getElementById("car-info");
+        myCar.carInfo();
+    </script>
+    <p>Let's calculate the time it takes to cover a 800 km long journey with time for rest every 4 hours: </p>
+    <script>
+        const distanceToDestination = 800;
+        const travelTime = myCar.calculateTravelTime(distanceToDestination);
+        const travelTimeElement = document.createElement("p");
+        travelTimeElement.textContent = `Time for travel: ${travelTime} hours`;
+        document.body.appendChild(travelTimeElement);
+    </script>
+</body>
+</html>
