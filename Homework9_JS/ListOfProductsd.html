@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div id="shoppingList"></div>
+    <script src="ListOfProducts.js"></script>
+    <script>
+        let shoppingList = new ShoppingList();
+        shoppingList.addItem('Milk', 2);
+        shoppingList.addItem('Bread', 1);
+        shoppingList.addItem('Tea', 1);
+        shoppingList.addItem('Carrot', 1);
+        shoppingList.addItem('Tea', 1);
+        shoppingList.addItem('Water', 1);
+        shoppingList.addItem('Cigaretes', 1);
+        shoppingList.addItem('Butter', 1);
+        shoppingList.addItem('Coffe', 1);
+        shoppingList.addItem('Sugar',1);
+        shoppingList.buyItem('Sugar');
+        shoppingList.displayList();
+    </script>
+</body>
+</html>

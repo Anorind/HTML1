@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div id="receipt"></div>
+    <div id="total"></div>
+    <div id="mostExp"></div>
+    <div id="averPrice"></div>
+    <script src="Receipt.js"></script>
+    <script>
+        let receipt = new Receipt();
+        receipt.addItem('Milk', 2,20);
+        receipt.addItem('Bread', 1,30);
+        receipt.addItem('Tea', 1,35);
+        receipt.addItem('Carrot', 1,5);
+        receipt.addItem('Tea', 1,25);
+        receipt.addItem('Water', 1,10);
+        receipt.addItem('Cigaretes', 1,35);
+        receipt.addItem('Butter', 1,40);
+        receipt.addItem('Coffe', 1,50);
+        receipt.displayReceipt();
+        document.getElementById('total').innerHTML = `Total Price: ${receipt.getTotal()} $`;
+        document.getElementById('mostExp').innerHTML = `Name of most expensive product: ${receipt.getMostExpensive().name}, Quantity: ${receipt.getMostExpensive().quantity}, Price: ${receipt.getMostExpensive().price} $`;
+        document.getElementById('averPrice').innerHTML = `Average price : ${receipt.getAveragePrice()} $`;
+    </script>
+</body>
+</html>
