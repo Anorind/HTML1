@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div id="auditoriums"></div>
+    <script src="Academy.js"></script>
+    <script>
+        let auditoriums = [
+            new Auditorium('A1', 20, 'Computer Science'),
+            new Auditorium('A4', 25, 'Computer Science'),
+            new Auditorium('B1', 15, 'Physics'),
+            new Auditorium('C1', 10, 'Mathematics'),
+        ];
+        displayAuditoriums(auditoriums);
+
+        displayAuditoriumsForFaculty(auditoriums, 'Computer Science');
+
+        let group = new Group('Group 1', 15, 'Computer Science');
+        displaySuitableAuditoriums(auditoriums, group);
+
+        let sortedBySeats = sortAuditoriumsBySeats(auditoriums);
+        displayAuditoriums(sortedBySeats);
+
+        let sortedByName = sortAuditoriumsByName(auditoriums);
+        displayAuditoriums(sortedByName);
+    </script>
+</body>
+</html>
