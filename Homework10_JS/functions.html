@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Functions</title>
+    <script src="functions.js"></script>
+</head>
+<body>
+    <script>
+        document.write('<p>Count of characters: ' + JSON.stringify(countCharacters('Hello, World! 123')) + '</p>');
+        document.write('<p>Number to text: ' + numberToText(35) + '</p>');
+        document.write('<p>Swap case: ' + swapCase('Hello, World! 123') + '</p>');
+        document.write('<p>To camel case: ' + toCamelCase('font-size') + '</p>');
+        document.write('<p>To abbreviation: ' + toAbbreviation('cascading style sheets') + '</p>');
+        document.write('<p>Concatenate strings: ' + concatenateStrings('Hello, ', 'World!') + '</p>');
+        document.write('<p>Calculate: ' + calculate('2 + 3 * 4') + '</p>');
+        document.write('<p>Parse URL: ' + JSON.stringify(parseUrl('https://itstep.org/ua/about')) + '</p>');
+        document.write('<p>Split string: ' + splitString('10/08/2020', '/') + '</p>');
+        document.write('<p>Print: ' + print("Today is %1 %2.%3.%4", "Monday", 10, 8, 2020) + '</p>');
+    </script>
+</body>
+</html>
