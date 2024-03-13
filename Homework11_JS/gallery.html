@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
-<body>
+<body style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
 
+<button style="margin-right: 50px;" onclick="changeImage(-1)"><img src="https://github.com/Anorind/HTML1/raw/main/Homework11_JS/My%20pictures/arrow-50.png" style="transform: rotate(180deg);"></button>
 <img id="galleryImage" src="" style="width:200px;height:200px;">
-<br>
-<button onclick="changeImage(-1)">Назад</button>
-<button onclick="changeImage(1)">Вперед</button>
+<button style="margin-left: 50px;" onclick="changeImage(1)"><img src="https://github.com/Anorind/HTML1/raw/main/Homework11_JS/My%20pictures/arrow-50.png"></button>
 
 <script>
-var images = ["image1.jpg", "image2.jpg", "image3.jpg"]; // замініть ці назви файлів на назви ваших зображень
+var images = ["https://github.com/Anorind/HTML1/raw/main/Homework11_JS/My%20pictures/FirstPic.jpeg", "https://github.com/Anorind/HTML1/raw/main/Homework11_JS/My%20pictures/Picture2.jpg"];
 var imageIndex = 0;
 
 document.getElementById("galleryImage").src = images[imageIndex];
