@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Forum</title>
+<style>
+  .message { border-bottom: 1px solid #ccc; margin-bottom: 10px; }
+  .timestamp { font-size: 0.85em; color: #888;display:block;width:100%;text-align: right; }
+  textarea { width: 100%; }
+  input{width:100%;}
+  button{width:100%;}
+  form{width:100%;}
+  form > * { display: block; margin-bottom: 10px; }
+</style>
+<script>
+  function addMessage() {
+    var name = document.getElementById('name').value;
+    var text = document.getElementById('text').value;
+    var date = new Date().toLocaleDateString('uk-UA');
+    var time = new Date().toLocaleTimeString('uk-UA');
+    var messageList = document.getElementById('messages');
+    var message = document.createElement('div');
+    message.classList.add('message');
+    message.innerHTML = '<strong>' + name + '</strong> <span class="timestamp">(' + date + ' ' + time + ')</span><p>' + text + '</p>';
+    messageList.appendChild(message);
+    
+  }
+</script>
+</head>
+<body>
+
+<div id="messages"></div>
+
+<form onsubmit="addMessage(); return false;">
+  <input type="text" id="name" placeholder="Name" required>
+  <textarea id="text" placeholder="Enter your message" required></textarea>
+  <button type="submit">Enter your message</button>
+</form>
+
+</body>
+</html>
