@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Палітра кольорів</title>
+</head>
+<body>
+    <form id="colorForm">
+        <label for="colorName">Назва кольору:</label><br>
+        <input type="text" id="colorName" name="colorName"><br>
+        <label for="colorType">Тип кольору:</label><br>
+        <select id="colorType" name="colorType">
+            <option value="RGB">RGB</option>
+            <option value="RGBA">RGBA</option>
+            <option value="HEX">HEX</option>
+        </select><br>
+        <label for="colorCode">Код кольору:</label><br>
+        <input type="text" id="colorCode" name="colorCode"><br>
+        <input type="submit" value="Save">
+    </form>
+    <div id="colors"></div>
+    <script src="form1.js"></script>
+</body>
+</html>
