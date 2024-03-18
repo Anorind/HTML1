@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Прогноз погоди</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .weather-block {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .weather-block img {
+            width: 100%;
+            max-width: 150px;
+        }
+        .weather-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        #hourlyWeather {
+            display: flex;
+            justify-content: space-between;
+        }
+        .temp {
+            font-size: 2em;
+            margin-right: 20px;
+            margin-top: 100px;
+        }
+        #currentWeather {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <h1>Прогноз погоди</h1>
+    <input type="text" id="city" placeholder="Введіть місто">
+    <button id="getWeather">Отримати погоду</button>
+    <div id="currentWeather"></div>
+    <div id="hourlyWeather"></div>
+
+    <script>
+        $(document).ready(function(){
+            $('#getWeather').click(function(){
+                var city = $('#city').val();
+                var key  = 'fa2997bd3114af75f0761e77ff8fbf00';
+                $.ajax({
+                    url:'http://api.openweathermap.org/data/2.5/weather',
+                    dataType:'json',
+                    type:'GET',
+                    data:{q:city, appid: key, units: 'metric'},
+                    success: function(data){
+                        var wf = '<div><h2>' + data.name + '</h2><img src="http://openweathermap.org/img/w/' + data.weather[0].icon + '.png" style="height: 150px;"></div>';
+                        wf += '<div class="temp">' + data.main.temp + '°C</div>';
+                        wf += '<div class="weather-info"><p>Опис погоди: ' + data.weather[0].description + '</p>';
+                        wf += '<p>Мінімальна температура: ' + data.main.temp_min + '°C</p>';
+                        wf += '<p>Максимальна температура: ' + data.main.temp_max + '°C</p>';
+                        wf += '<p>Швидкість вітру: ' + data.wind.speed + ' м/с</p></div>';
+                        $("#currentWeather").html(wf);
+                    }
+                });
+
+                $.ajax({
+                    url:'http://api.openweathermap.org/data/2.5/forecast',
+                    dataType:'json',
+                    type:'GET',
+                    data:{q:city, appid: key, units: 'metric'},
+                    success: function(data){
+                        var wf = '';
+                        for(var i = 0; i < 6; i++){
+                            wf += '<div class="weather-info"><h2>' + new Date(data.list[i].dt_txt).toLocaleTimeString() + '</h2><img src="http://openweathermap.org/img/w/' + data.list[i].weather[0].icon + '.png">';
+                            wf += '<p>Опис погоди: ' + data.list[i].weather[0].description + '</p>';
+                            wf += '<p>Поточна температура: ' + data.list[i].main.temp + '°C</p></div>';
+                        }
+                        $("#hourlyWeather").html(wf);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
