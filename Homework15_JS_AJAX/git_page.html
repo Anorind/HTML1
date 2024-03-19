@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GitHub User Info</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #userInfo {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="userLogin" placeholder="Введіть логін GitHub">
+    <button id="searchButton">Пошук</button>
+    <div id="userInfo">
+        <img id="photo" src="" alt="Фото користувача">
+        <p><strong>Ім’я:</strong> <span id="name"></span></p>
+        <p><strong>Логін:</strong> <span id="login"></span></p>
+        <p><strong>GitHub:</strong> <a id="githubLink" href=""></a></p>
+        <p><strong>Блог:</strong> <a id="blogLink" href=""></a></p>
+        <p><strong>Місто:</strong> <span id="location"></span></p>
+        <p><strong>Пошта:</strong> <span id="email"></span></p>
+        <p><strong>Підписники:</strong> <span id="followers"></span></p>
+        <p><strong>Підписки:</strong> <span id="following"></span></p>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('#searchButton').click(function() {
+                var userLogin = $('#userLogin').val();
+                $.ajax({
+                    url: 'https://api.github.com/users/' + userLogin,
+                    dataType: 'json',
+                    success: function(data) {
+                        $('#photo').attr('src', data.avatar_url);
+                        $('#name').text(data.name || 'Дані відсутні');
+                        $('#login').text(data.login || 'Дані відсутні');
+                        $('#githubLink').attr('href', data.html_url).text(data.html_url);
+                        $('#blogLink').attr('href', data.blog || '#');
+                        $('#blogLink').text(data.blog ? data.blog : 'Блог відсутній');
+                        $('#location').text(data.location || 'Дані відсутні');
+                        $('#email').text(data.email || 'Дані відсутні');
+                        $('#followers').text(data.followers);
+                        $('#following').text(data.following);
+                    },
+                    error: function() {
+                        alert('Не вдалося отримати дані');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
